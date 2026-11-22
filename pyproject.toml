@@ -1,38 +1,35 @@
+[project]
+name = "dronefly-monorepo"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+dependencies = []
+
 [tool.uv.workspace]
-members = [
-    "dronefly-cli",
-    "dronefly-core",
-    "dronefly-discord",
-    "dronefly-doc",
-    "dronefly-miner",
-    "dronefly",
-]
+members = []
 
 [tool.uv.sources]
+dronefly = { path = "../dronefly", editable = true }
+dronefly-cli = { path = "../dronefly-cli", editable = true }
+dronefly-core = { path = "../dronefly-core", editable = true }
+dronefly-discord = { path = "../dronefly-discord", editable = true }
+dronefly-miner = { path = "../dronefly-miner", editable = true }
+pyinaturalist = { git = "https://github.com/pyinat/pyinaturalist.git", rev = "main" }
+pyinaturalist-convert = { git = "https://github.com/pyinat/pyinaturalist-convert.git", rev = "main" }
 
-[tool.uv.sources.dronefly-miner]
-workspace = true
-
-[tool.uv.sources.dronefly-doc]
-workspace = true
-
-[tool.uv.sources.dronefly-discord]
-workspace = true
-
-[tool.uv.sources.dronefly-core]
-workspace = true
-
-[tool.uv.sources.dronefly-cli]
-workspace = true
-
-[tool.uv.sources.dronefly]
-workspace = true
 [tool.uv]
+default-groups = ["members", "dev"]
 override-dependencies = [
     "starlette>=0.35",
 ]
 
 [dependency-groups]
+members = [
+    "dronefly",
+    "dronefly-cli",
+    "dronefly-core",
+    "dronefly-discord",
+    "dronefly-miner",
+]
 dev = [
     "pyinaturalist",
     "tomlkit",
