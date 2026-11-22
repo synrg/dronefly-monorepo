@@ -6,7 +6,6 @@
         "dronefly-core",
         "dronefly-discord",
         "dronefly-doc",
-        "dronefly-miner",
-        "pyinaturalist-convert"
+        "dronefly-miner"
     ]
 }
