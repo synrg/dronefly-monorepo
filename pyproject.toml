@@ -1,0 +1,31 @@
+[tool.uv.workspace]
+members = [
+    "dronefly-cli",
+    "dronefly-core",
+    "dronefly-discord",
+    "dronefly-doc",
+    "dronefly-miner",
+    "dronefly",
+    "pyinaturalist",
+    "pyinaturalist-convert",
+]
+
+[tool.uv.sources]
+dronefly-cli = { workspace = true }
+dronefly-core = { workspace = true }
+dronefly-discord = { workspace = true }
+dronefly-doc = { workspace = true }
+dronefly-miner = { workspace = true }
+dronefly = { workspace = true }
+pyinaturalist = { workspace = true }
+pyinaturalist-convert = { workspace = true }
+
+[tool.uv]
+override-dependencies = [
+    "starlette>=0.35",
+]
+
+[dependency-groups]
+dev = [
+    "pyinaturalist",
+]
