@@ -1,0 +1,24 @@
+{
+    "folders": [
+        { "name": "monorepo", "path": "." },
+        { "name": "dronefly", "path": "../dronefly" },
+        { "name": "dronefly-core", "path": "../dronefly-core" },
+        { "name": "dronefly-discord", "path": "../dronefly-discord" },
+        { "name": "dronefly-miner", "path": "../dronefly-miner" },
+        { "name": "dronefly-cli", "path": "../dronefly-cli" },
+        { "name": "dronefly-doc", "path": "../dronefly-doc" }
+    ],
+    "settings": {
+        "python.defaultInterpreterPath": "${workspaceFolder:monorepo}/.venv/bin/python",
+        "python.analysis.diagnosticMode": "workspace",
+        "python.analysis.extraPaths": [
+            ".",
+            "../dronefly",
+            "../dronefly-core",
+            "../dronefly-discord",
+            "../dronefly-miner",
+            "../dronefly-cli",
+            "../dronefly-doc"
+        ]
+    }
+}
