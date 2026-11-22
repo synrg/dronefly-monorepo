@@ -9,6 +9,7 @@ members = []
 
 [tool.uv.sources]
 dronefly = { path = "../dronefly", editable = true }
+dronefly-cli = { path = "../dronefly-cli", editable = true }
 dronefly-core = { path = "../dronefly-core", editable = true }
 dronefly-discord = { path = "../dronefly-discord", editable = true }
 dronefly-miner = { path = "../dronefly-miner", editable = true }
@@ -24,13 +25,13 @@ override-dependencies = [
 [dependency-groups]
 members = [
     "dronefly",
+    "dronefly-cli",
     "dronefly-core",
     "dronefly-discord",
     "dronefly-miner",
 ]
 dev = [
     "pip",
-    "pre-commit",
     "pyinaturalist",
     "tomlkit",
 ]
