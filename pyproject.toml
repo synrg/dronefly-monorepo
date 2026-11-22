@@ -31,6 +31,7 @@ members = [
     "dronefly-miner",
 ]
 dev = [
+    "pip",
     "pyinaturalist",
     "tomlkit",
 ]
