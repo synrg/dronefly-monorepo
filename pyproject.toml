@@ -33,5 +33,7 @@ members = [
 dev = [
     "pip",
     "pyinaturalist",
+    "pytest",
+    "pytest_asyncio",
     "tomlkit",
 ]
