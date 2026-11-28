@@ -10,6 +10,9 @@ resolution-markers = [
     "python_full_version < '3.11.5' and sys_platform != 'emscripten' and sys_platform != 'win32'",
 ]
 
+[options]
+prerelease-mode = "allow"
+
 [manifest]
 overrides = [{ name = "starlette", specifier = ">=0.35" }]
 
@@ -373,7 +376,7 @@ wheels = [
 
 [[package]]
 name = "dronefly"
-version = "0.5"
+version = "0.6.dev2"
 source = { editable = "../dronefly" }
 dependencies = [
     { name = "aiohttp-retry" },
@@ -390,7 +393,7 @@ dependencies = [
 requires-dist = [
     { name = "aiohttp-retry", specifier = ">=2.4.5,<3" },
     { name = "aiolimiter", specifier = ">=1.0.0,<2" },
-    { name = "dronefly-discord", specifier = ">=0.2.3,<0.3" },
+    { name = "dronefly-discord", specifier = "==0.2.4.dev3" },
     { name = "dronefly-miner", specifier = ">=0.2.0" },
     { name = "ebird-api", specifier = ">=3.0.6,<4" },
     { name = "filelock", specifier = ">=3.13.3,<4" },
@@ -411,7 +414,7 @@ dev = [
 
 [[package]]
 name = "dronefly-cli"
-version = "0.3.1"
+version = "0.3.2.dev1"
 source = { editable = "../dronefly-cli" }
 dependencies = [
     { name = "dronefly-core" },
@@ -421,7 +424,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "dronefly-core", specifier = ">=0.5.4.dev1" },
+    { name = "dronefly-core", editable = "../dronefly-core" },
     { name = "pyreadline3", specifier = ">=3.4.1,<4" },
     { name = "rich", specifier = ">=13.2,<15" },
 ]
@@ -437,7 +440,7 @@ dev = [
 
 [[package]]
 name = "dronefly-core"
-version = "0.5.4.dev1"
+version = "0.5.4.dev3"
 source = { editable = "../dronefly-core" }
 dependencies = [
     { name = "dateparser" },
@@ -454,7 +457,7 @@ requires-dist = [
     { name = "filelock", specifier = ">=3.13.3,<4" },
     { name = "html2markdown", specifier = ">=0.1.7,<0.2" },
     { name = "inflect", specifier = ">=5.3.0,<6" },
-    { name = "pyinaturalist", specifier = ">=1.0.0.dev2" },
+    { name = "pyinaturalist", specifier = ">=1.0.0.dev3" },
     { name = "rich", specifier = ">=13.4" },
 ]
 
@@ -470,7 +473,7 @@ dev = [
 
 [[package]]
 name = "dronefly-discord"
-version = "0.2.4.dev1"
+version = "0.2.4.dev3"
 source = { editable = "../dronefly-discord" }
 dependencies = [
     { name = "discord-py" },
@@ -482,9 +485,9 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "discord-py", specifier = ">=2.3.1" },
-    { name = "dronefly-core", specifier = ">=0.5.4.dev1" },
+    { name = "dronefly-core", specifier = "==0.5.4.dev3" },
     { name = "inflect", specifier = ">=5.3.0,<6" },
-    { name = "pyinaturalist", specifier = ">=1.0.0.dev2" },
+    { name = "pyinaturalist", specifier = ">=1.0.0.dev3" },
 ]
 
 [package.metadata.requires-dev]
@@ -524,7 +527,7 @@ requires-dist = [
     { name = "parquet", specifier = ">=1.3.1" },
     { name = "polars", specifier = ">=1.44.2" },
     { name = "pyarrow", specifier = ">=25.0.1" },
-    { name = "pyinaturalist", specifier = ">=1.0.0.dev2" },
+    { name = "pyinaturalist", specifier = ">=1.0.0.dev3" },
     { name = "pyinaturalist-convert", git = "https://github.com/pyinat/pyinaturalist-convert.git?rev=b4c55439686f3cd0aabbe91034cc2497cd3f060a" },
     { name = "sqlalchemy", specifier = ">=2.0.52" },
     { name = "xmltodict", specifier = ">=1.0.4" },

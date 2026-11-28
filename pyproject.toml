@@ -21,6 +21,7 @@ default-groups = ["members", "dev"]
 override-dependencies = [
     "starlette>=0.35",
 ]
+prerelease = "allow"
 
 [dependency-groups]
 members = [
